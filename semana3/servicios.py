@@ -1,3 +1,5 @@
+""" aqui tenemos los servicios del inventario """
+
 def agregar_producto(inventory, name, price, quantity):
     inventory.append({"nombre": name, "precio": price, "cantidad": quantity})
 

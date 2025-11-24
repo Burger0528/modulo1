@@ -1,8 +1,10 @@
+""" programa principal del inventario.   programa de inventario para carga y lectura de arcivos txt  """
 import sys
 sys.dont_write_bytecode = True  # Evita __pycache__
 
 from servicios import *
 from archivos import guardar_txt, cargar_txt
+#Importamos las funciones de servicios y archivos
 
 # Cargar inventario desde archivo o inicializar productos por defecto
 inventory = cargar_txt()
@@ -41,6 +43,7 @@ def menu():
                 if price < 0 or quantity < 0:
                     print("Los valores no pueden ser negativos.")
                     continue
+            #capuramos el error
             except:
                 print("Debes ingresar valores numéricos válidos.")
                 continue
